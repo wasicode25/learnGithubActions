@@ -1,0 +1,9 @@
+name: CI
+on: push
+jobs:
+  ejemplo_script:
+    steps:
+      - name: Ejecutando mi script
+        run: ./.github/scripts/saludo.sh
+        shell: bash
+    
