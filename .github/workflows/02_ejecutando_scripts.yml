@@ -2,6 +2,7 @@ name: CI
 on: push
 jobs:
   ejemplo_script:
+    runs-on: ubuntu-latest
     steps:
       - name: Ejecutando mi script
         run: ./.github/scripts/saludo.sh
