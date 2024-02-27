@@ -5,7 +5,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout
-        uses: actions/checkout@v4  
+        uses: actions/checkout@v4 
+      - name: Make the script files executable
+        run: chmod +x saludo.sh
       - name: Ejecutando mi script
         run: ./.github/scripts/saludo.sh
         shell: bash
