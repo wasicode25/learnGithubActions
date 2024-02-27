@@ -4,6 +4,8 @@ jobs:
   ejemplo_script:
     runs-on: ubuntu-latest
     steps:
+      - name: checkout
+        uses: actions/checkout@v4  
       - name: Ejecutando mi script
         run: ./.github/scripts/saludo.sh
         shell: bash
