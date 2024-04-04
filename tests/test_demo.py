@@ -1,4 +1,7 @@
-from main import demo
+import sys 
+sys.path.insert(0,'../src')
+
+from src import demo
 def test_demo_menor():
     resultado=demo.mi_funcion(3,10)
     assert resultado=='menor'

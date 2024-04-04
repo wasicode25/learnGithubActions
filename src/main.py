@@ -5,4 +5,3 @@ def mi_funcion(a,b):
   else:
     return 'menor'
 
-
