@@ -14,3 +14,10 @@ def my_pow(num, exponent):  # Noncompliant
 
 app = Flask(__name__)
 app.config['JWT_SECRET_KEY'] = secret_key  # Noncompliant
+
+def func(var: str):
+    pass
+
+func(42)  # Noncompliant: 42 is not of type str.
+
+round("not a number")  # Noncompliant: the builtin function round requires a number as first parameter.
