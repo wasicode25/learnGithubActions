@@ -30,3 +30,22 @@ def my_fun(my_dict):
     for key in my_dict:
         if my_dict[key] == 'foo':
             my_dict.pop(key) # Noncompliant: this will make the iteration unreliable
+
+del (1, 2)[0]  # Noncompliant: tuples are immutable
+(1, 2)[0] = 42  # Noncompliant
+(1, 2)[0]
+
+class A:
+    def __init__(self, values):
+        self._values = values
+
+a = A([0,1,2])
+
+a[0]  # Noncompliant
+del a[0]  # Noncompliant
+a[0] = 42  # Noncompliant
+
+class B:
+    pass
+
+B[0]  # Noncompliant
