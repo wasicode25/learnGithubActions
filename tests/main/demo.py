@@ -1,7 +1,5 @@
 print("DEMO")
-def mi_funcion():
-  a=1
-  b=3
+def mi_funcion(a,b):
   if a>b:
     return 'mayor'
   else:
