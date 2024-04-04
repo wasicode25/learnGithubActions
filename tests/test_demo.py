@@ -4,4 +4,4 @@ def test_demo_menor():
     assert resultado=='menor'
 def test_demo_mayor():
     resultado=demo.mi_funcion(10,3)
-    assert resultado=='menor'
+    assert resultado=='mayor'
