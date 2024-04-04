@@ -46,7 +46,7 @@ jobs:
       with:
         name: unit_test_coverage
     - name: pintando coverage
-      run: cat coverage
+      run: cat coverage.xml
 
 
 
