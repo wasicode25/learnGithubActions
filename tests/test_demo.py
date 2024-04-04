@@ -1,2 +1,4 @@
+from main import demo
 def test_demo():
-    assert 1 ==1
+    resultado=demo.mi_funcion()
+    assert resultado=='menor'
