@@ -26,3 +26,7 @@ def foo():
     my_dict = {'k1': 42}
     ...
     value = my_dict['k2']  # Noncompliant: the key "k2" does not exist.
+def my_fun(my_dict):
+    for key in my_dict:
+        if my_dict[key] == 'foo':
+            my_dict.pop(key) # Noncompliant: this will make the iteration unreliable
