@@ -8,7 +8,9 @@ def mi_funcion():
   else
     return 'menor'
 
-
+def my_pow(num, exponent):  # Noncompliant
+    num = num * my_pow(num, exponent - 1)
+    return num  # this is never reached
 
 app = Flask(__name__)
 app.config['JWT_SECRET_KEY'] = secret_key  # Noncompliant
