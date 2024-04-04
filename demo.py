@@ -5,7 +5,7 @@ def mi_funcion():
   b=3
   if a>b:
     return 'mayor'
-  else
+  else:
     return 'menor'
 
 def my_pow(num, exponent):  # Noncompliant
