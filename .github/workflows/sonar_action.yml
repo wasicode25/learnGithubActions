@@ -24,9 +24,30 @@ jobs:
       run: pip install tox
     - name: Run tox
       run: tox -e py
+    - name: Archive artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: unit_test_coverage
+        path: coverage
+        
     - name: SonarQube Scan
       uses: sonarsource/sonarqube-scan-action@v2.0.1
       env:
         SONAR_HOST_URL: ${{ secrets.SONARQUBE_HOST }}
         SONAR_TOKEN: ${{ secrets.SONARQUBE_TOKEN }}
+
+  recuperar_atifact:
+    needs: sonarqube
+
+    runs-on: ubuntu-latest
+    steps:
+    - name: descargando artifact
+      uses: actions/download-artifact@v4
+      with:
+        name: unit_test_coverage
+    - name: pintando coverage
+      run: cat coverage
+
+
+
 
