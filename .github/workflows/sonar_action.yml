@@ -28,7 +28,9 @@ jobs:
       run: tox -e py
     - name: Copiar directorio
       working-directory: ./servipagos
-      run: cp /servipagos/coverage.xml .
+      run: |
+        ls
+        cp /servipagos/coverage.xml .
     - name: Archive artifacts
       uses: actions/upload-artifact@v4
       with:
