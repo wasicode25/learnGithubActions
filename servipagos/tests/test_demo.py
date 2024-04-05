@@ -1,5 +1,5 @@
 import sys 
-#sys.path.insert(0,'../servipagos/src')
+sys.path.insert(0,'../src')
 
 from bronze import main
 def test_demo_menor():
