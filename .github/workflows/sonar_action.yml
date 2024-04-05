@@ -44,6 +44,9 @@ jobs:
         name: unit_test_coverage
     - name: pintando coverage
       run: cat coverage.xml
+    - name: cambiando directorio
+      working-directory: ./
+      run: ls
     - name: SonarQube Scan
       uses: sonarsource/sonarqube-scan-action@v2.0.1
       env:
