@@ -40,7 +40,6 @@ jobs:
         path: coverage.xml
         
 
-
   recuperar_atifact:
     needs: sonarqube
 
