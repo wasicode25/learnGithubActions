@@ -25,7 +25,9 @@ jobs:
     - name: Run tox
       #working-directory: ./
       working-directory: ./
-      run: tox -e py
+      run: |
+        cd servipagos
+        tox -e py
     - name: Copiar directorio
       working-directory: ./
       run: |
