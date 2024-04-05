@@ -1,7 +1,7 @@
 import sys 
-sys.path.insert(0,'../src')
+#sys.path.insert(0,'../servipagos/src')
 
-from src import main
+from bronze import main
 def test_demo_menor():
     resultado=main.mi_funcion(3,10)
     assert resultado=='menor'
