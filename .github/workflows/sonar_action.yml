@@ -24,7 +24,7 @@ jobs:
       run: pip install tox
     - name: Run tox
       #working-directory: ./
-      working-directory: ./
+      working-directory: ./servipagos
       run: 
         tox -e py
     - name: Copiar directorio
