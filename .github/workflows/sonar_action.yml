@@ -23,8 +23,8 @@ jobs:
     - name: Install tox and any other packages
       run: pip install tox
     - name: Run tox
-      #working-directory: ./
-      working-directory: ./servipagos
+      working-directory: ./
+      #working-directory: ./servipagos
       run: 
         tox -e py
     - name: Copiar directorio
@@ -36,7 +36,8 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: unit_test_coverage
-        path: ./servipagos/coverage.xml
+        #path: ./servipagos/coverage.xml
+        path: coverage.xml
         
 
 
