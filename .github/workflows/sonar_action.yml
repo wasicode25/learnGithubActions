@@ -29,7 +29,15 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: unit_test_coverage
-        path: coverage.xml
+        path: /servipagos/coverage.xml
+        
+
+
+  recuperar_atifact:
+    needs: sonarqube
+
+    runs-on: ubuntu-latest
+    steps:
     - name: descargando artifact
       uses: actions/download-artifact@v4
       with:
@@ -41,15 +49,6 @@ jobs:
       env:
         SONAR_HOST_URL: ${{ secrets.SONARQUBE_HOST }}
         SONAR_TOKEN: ${{ secrets.SONARQUBE_TOKEN }}
-        
-
-
-  recuperar_atifact:
-    needs: sonarqube
-
-    runs-on: ubuntu-latest
-    steps:
-
 
 
 
