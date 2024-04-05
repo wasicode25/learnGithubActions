@@ -23,9 +23,12 @@ jobs:
     - name: Install tox and any other packages
       run: pip install tox
     - name: Run tox
-      working-directory: ./
-      #working-directory: ./servipagos
+      #working-directory: ./
+      working-directory: ./servipagos
       run: tox -e py
+    - name: Copiar directorio
+      working-directory: ./servipagos
+      run: cp /servipagos/coverage.xml .
     - name: Archive artifacts
       uses: actions/upload-artifact@v4
       with:
