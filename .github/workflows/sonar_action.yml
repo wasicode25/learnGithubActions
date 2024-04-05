@@ -30,11 +30,7 @@ jobs:
         name: unit_test_coverage
         path: coverage.xml
         
-    - name: SonarQube Scan
-      uses: sonarsource/sonarqube-scan-action@v2.0.1
-      env:
-        SONAR_HOST_URL: ${{ secrets.SONARQUBE_HOST }}
-        SONAR_TOKEN: ${{ secrets.SONARQUBE_TOKEN }}
+
 
   recuperar_atifact:
     needs: sonarqube
@@ -47,6 +43,11 @@ jobs:
         name: unit_test_coverage
     - name: pintando coverage
       run: cat coverage.xml
+    - name: SonarQube Scan
+      uses: sonarsource/sonarqube-scan-action@v2.0.1
+      env:
+        SONAR_HOST_URL: ${{ secrets.SONARQUBE_HOST }}
+        SONAR_TOKEN: ${{ secrets.SONARQUBE_TOKEN }}
 
 
 
