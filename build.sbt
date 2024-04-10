@@ -14,3 +14,5 @@ lazy val multiModule = (project in file("."))
   .aggregate(servipagos)
   .settings(name := "sbt-multi-module")
   .settings(baseSettings)
+
+  scalaSource in Test := baseDirectory.value / "servipagos/tests"
