@@ -21,7 +21,9 @@ jobs:
       with:
         python-version: 3.11
     - name: Run tests Scala
-      run: sbt clean coverage test
+      run: |
+        sbt clean coverage test
+        sbt coverageReport
 
     - name: Install tox and any other packages
       run: pip install tox
