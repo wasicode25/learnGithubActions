@@ -1,4 +1,1 @@
-libraryDependencies += "org.scala-sbt" %% "scripted-plugin" % sbtVersion.value
-addSbtPlugin("com.github.sbt" % "sbt-ci-release" % "1.5.12")
-addSbtPlugin("com.eed3si9n" % "sbt-buildinfo" % "0.12.0")
-addSbtPlugin("org.scalameta" % "sbt-scalafmt" % "2.5.2")
+libraryDependencies += "org.scoverage" % "sbt-scoverage_2.12_1.0" % "1.9.9"
