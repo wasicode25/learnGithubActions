@@ -7,9 +7,9 @@ line-rate="0.06" lines-valid="17" lines-covered="1" branches-valid="4" branches-
         <source></source>
     </sources>
     <packages>
-        <package name="&lt;empty&gt;" line-rate="0.06" branch-rate="0.00" complexity="0">
+        <package name="servipagos.src.bronze" line-rate="0.06" branch-rate="0.00" complexity="0">
             <classes>
-                <class name="Example" filename="bronze/example.scala" line-rate="0.06" branch-rate="0.00" complexity="0">
+                <class name="Example" filename="servipagos/src/bronze/example.scala" line-rate="0.06" branch-rate="0.00" complexity="0">
                     <methods>
                         <method name="&lt;empty&gt;/Example/ExampleIssues" signature="()V" line-rate="0.00" branch-rate="0.00" complexity="0">
                             <lines>
