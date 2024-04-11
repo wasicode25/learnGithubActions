@@ -41,7 +41,7 @@ jobs:
           coverage.xml
           target/scala-2.12/scoverage-report/scoverage.xml
           target/scala-2.12/coverage-report/cobertura.xml
-          target/scala-2.12/scoverage-report/index.html]
+          target/scala-2.12/scoverage-report/index.html
         
 
   recuperar_atifact:
