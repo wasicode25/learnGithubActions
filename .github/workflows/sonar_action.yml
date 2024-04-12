@@ -61,7 +61,7 @@ jobs:
       working-directory: ./
       run: ls
     - name: Replace all working directory paths with sources path
-      working-directory: target/scala-2.12/scoverage-report/scoverage.xml
+      working-directory: target/scala-2.12/scoverage-report
       run: if [[ -n "scoverage.xml" ]]; then sed -i -e s,`pwd`,/github/workspace,g scoverage.xml; fi
       shell: bash
     - name: SonarQube Scan
