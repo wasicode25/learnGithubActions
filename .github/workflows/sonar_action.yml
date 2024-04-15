@@ -31,7 +31,7 @@ jobs:
         if find . -name "*.py" | grep -q .; then
           echo "HAS_PYTHON=true" >> $GITHUB_ENV
         else
-        echo "HAS_PYTHON=false" >> $GITHUB_ENV
+          echo "HAS_PYTHON=false" >> $GITHUB_ENV
         if
     - name: Install tox and any other packages
       if: env.HAS_PYTHON == 'true'
