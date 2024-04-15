@@ -24,10 +24,20 @@ jobs:
       run: |
         sbt clean coverage test
         sbt coverageAggregate
-
+    
+    - name: Check for python files
+      id: checkpython
+      run: |
+        if find . -name "*.py" | grep -q .; then
+          echo "HAS_PYTHON=true" >> $GITHUB_ENV
+        else
+        echo "HAS_PYTHON=false" >> $GITHUB_ENV
+        if
     - name: Install tox and any other packages
+      if: env.HAS_PYTHON == 'true'
       run: pip install tox
     - name: Run tox
+      if: env.HAS_PYTHON == 'true'
       working-directory: ./
       #working-directory: ./servipagos
       run: 
