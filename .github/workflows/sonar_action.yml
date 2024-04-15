@@ -25,14 +25,16 @@ jobs:
         sbt clean coverage test
         sbt coverageAggregate
     
-    - name: Check for python files
+    - name: Check for Python files
       id: checkpython
       run: |
         if find . -name "*.py" | grep -q .; then
+          echo "Python files found."
           echo "HAS_PYTHON=true" >> $GITHUB_ENV
         else
+          echo "No Python files found."
           echo "HAS_PYTHON=false" >> $GITHUB_ENV
-        if
+        fi
     - name: Install tox and any other packages
       if: env.HAS_PYTHON == 'true'
       run: pip install tox
