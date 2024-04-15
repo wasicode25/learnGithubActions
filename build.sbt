@@ -14,6 +14,10 @@ lazy val servipagos = (project in file("servipagos"))
 lazy val otros = (project in file("otros"))
   .settings(baseSettings)
   .settings(name := "otros")
+  .settings(name := "servipagos",
+        Test /scalaSource  := baseDirectory.value / "/tests",
+        Compile / scalaSource  := baseDirectory.value / "/src" 
+  )
 
 
 lazy val multiModule = (project in file("."))
