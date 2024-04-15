@@ -18,5 +18,5 @@ lazy val multiModule = (project in file("."))
   .settings(name := "sbt-multi-module")
   .settings(baseSettings)
 
-    Test /scalaSource  := baseDirectory.value / "servipagos/tests" 
-    Compile / scalaSource  := baseDirectory.value / "servipagos/src" 
+    Test /scalaSource  := baseDirectory.value / "**/tests" 
+    Compile / scalaSource  := baseDirectory.value / "**/src" 
