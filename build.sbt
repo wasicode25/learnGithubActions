@@ -1,8 +1,6 @@
 lazy val baseSettings = Seq(
     scalaVersion := "2.12.15",
-    libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.9" % "test",
-    Test / scalaSource  := baseDirectory.value / "tests" 
-    Compile / scalaSource  := baseDirectory.value / "src" 
+    libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.9" % "test"
 )
 
 lazy val servipagos = (project in file("servipagos"))
@@ -20,3 +18,5 @@ lazy val multiModule = (project in file("."))
   .settings(name := "sbt-multi-module")
   .settings(baseSettings)
 
+    Test /scalaSource  := baseDirectory.value / "servipagos/tests" 
+    Compile / scalaSource  := baseDirectory.value / "servipagos/src" 
