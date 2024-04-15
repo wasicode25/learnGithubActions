@@ -53,7 +53,7 @@ jobs:
       with:
         name: unit_test_coverage
     - name: pintando coverage
-      run: cat coverage.xml
+      run: cat scoverage.xml
     - name: cambiando directorio
       working-directory: ./
       run: ls
