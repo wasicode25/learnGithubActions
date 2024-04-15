@@ -6,8 +6,8 @@ lazy val baseSettings = Seq(
 lazy val servipagos = (project in file("servipagos"))
   .settings(baseSettings)
   .settings(name := "servipagos",
-        Test /scalaSource  := baseDirectory.value / "servipagos/tests",
-        Compile / scalaSource  := baseDirectory.value / "**/src" 
+        Test /scalaSource  := baseDirectory.value / "/tests",
+        Compile / scalaSource  := baseDirectory.value / "/src" 
   )
 
 
