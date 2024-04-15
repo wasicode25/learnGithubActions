@@ -21,9 +21,9 @@ lazy val multiModule = (project in file("."))
 Test /scalaSource  := Seq(
   baseDirectory.value / "servipagos/tests",
   baseDirectory.value / "otros/tests"
-)
+).reduceLeft(_ / _)
 
 Compile / scalaSource := Seq(
   baseDirectory.value / "servipagos/src",
   baseDirectory.value / "otros/src"
-)
+).reduceLeft(_ / _)
