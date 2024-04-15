@@ -38,10 +38,7 @@ jobs:
         name: unit_test_coverage
         #path: ./servipagos/coverage.xml
         path: |
-          coverage.xml
           target/scala-2.12/scoverage-report/scoverage.xml
-          target/scala-2.12/coverage-report/cobertura.xml
-          target/scala-2.12/scoverage-report/index.html
         
 
   recuperar_atifact:
