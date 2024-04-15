@@ -39,6 +39,7 @@ jobs:
         #path: ./servipagos/coverage.xml
         path: |
           target/scala-2.12/scoverage-report/scoverage.xml
+          coverage.xml
         
 
   recuperar_atifact:
