@@ -6,24 +6,22 @@ lazy val baseSettings = Seq(
 lazy val servipagos = (project in file("servipagos"))
   .settings(baseSettings)
   .settings(name := "servipagos")
+  .settings(
+     test := { baseDirectory.value / "servipagos/tests" },
+     compile := { baseDirectory.value / "servipagos/src" }
+  )
 
 
 lazy val otros = (project in file("otros"))
   .settings(baseSettings)
   .settings(name := "otros")
+  .settings(
+     test := { baseDirectory.value / "otros/tests" },
+     compile := { baseDirectory.value / "otros/src" }
+  )
 
 
 lazy val multiModule = (project in file("."))
   .aggregate(servipagos, otros)
   .settings(name := "sbt-multi-module")
   .settings(baseSettings)
-
-Test /scalaSource  := Seq(
-  baseDirectory.value / "servipagos/tests",
-  baseDirectory.value / "otros/tests"
-).reduceLeft(_ / _)
-
-Compile / scalaSource := Seq(
-  baseDirectory.value / "servipagos/src",
-  baseDirectory.value / "otros/src"
-).reduceLeft(_ / _)
