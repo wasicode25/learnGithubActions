@@ -54,7 +54,7 @@ jobs:
       with:
         name: unit_test_coverage
     - name: pintando coverage
-      run: cat scoverage.xml
+      run: cat target/scala-2.12/scoverage-report/scoverage.xml
     - name: cambiando directorio
       working-directory: ./
       run: ls
